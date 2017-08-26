@@ -10,7 +10,7 @@
  '(meghanada-auto-start nil)
  '(package-selected-packages
    (quote
-    (zerodark-theme material-theme java-imports java-snippets meghanada google-c-style flymake-cursor flymake-google-cpplint ac-c-headers company-jedi company-c-headers cider ac-cider magit origami default-text-scale auctex dired+ dired-quick-sort irony fiplr multiple-cursors emmet-mode treemacs-evil treemacs ac-emacs-eclim company-emacs-eclim gradle-mode eclim cmake-ide hydra smart-mode-line-powerline-theme moe-theme powerline python-django dumb-jump geben-helm-projectile projectile-codesearch counsel-projectile projectile smartparens ggtags virtualenvwrapper better-shell web-mode iedit expand-region aggressive-indent hungry-delete beacon smart-mode-line all-the-icons neotree elpy jedi flycheck dracula counsel swiper lorem-ipsum tabbar ace-window org-bullets which-key try use-package))))
+    (java-snippets meghanada google-c-style flymake-cursor flymake-google-cpplint ac-c-headers company-jedi company-c-headers cider ac-cider magit origami default-text-scale auctex dired+ dired-quick-sort irony fiplr multiple-cursors emmet-mode treemacs-evil treemacs ac-emacs-eclim company-emacs-eclim gradle-mode eclim cmake-ide hydra smart-mode-line-powerline-theme moe-theme powerline python-django dumb-jump geben-helm-projectile projectile-codesearch counsel-projectile projectile smartparens ggtags virtualenvwrapper better-shell web-mode iedit expand-region aggressive-indent hungry-delete beacon smart-mode-line all-the-icons neotree elpy jedi flycheck dracula counsel swiper lorem-ipsum tabbar ace-window org-bullets which-key try use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

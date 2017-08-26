@@ -1,1 +1,1 @@
-("~/.emacs.d/Mike Zamansky/" "~/Desktop/Programming/Python/learnpython/" "~/Desktop/Nodejs-Basics/")
+("~/.emacs.d/" "~/.emacs.d/Mike Zamansky/" "~/Desktop/Programming/Python/learnpython/" "~/Desktop/Nodejs-Basics/")
