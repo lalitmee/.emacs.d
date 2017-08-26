@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Please enter a year:"
+
+read y
+
+year = $y

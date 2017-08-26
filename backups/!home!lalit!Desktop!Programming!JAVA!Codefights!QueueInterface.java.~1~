@@ -1,0 +1,53 @@
+/**
+ ******************************************************************************
+ *                    HOMEWORK  15-121
+ ******************************************************************************
+ *                     Queue interface
+ ******************************************************************************
+ *
+ *
+ ******************************************************************************/
+ /*****************************************************************************
+
+               Do not modify this file.
+
+ *****************************************************************************/
+
+import java.util.*;
+
+public interface QueueInterface<AnyType>
+{
+	/**
+	*  Tests if the queue is logically empty
+	*/
+	public boolean isEmpty();
+
+	/**
+	*  Puts a value into the back of the queue. It works with wraparound.
+	*  If the queue is full, tt doubles its size.
+	*
+	*  @param value the item to insert.
+	*/
+	public void enqueue (AnyType value);
+
+	/**
+	*  Returns the first element in the queue.
+	*
+	*  @return element at front of the queue
+	*  @throws NoSuchElementException if the queue is empty.
+	*/
+	public AnyType getFront() throws java.util.NoSuchElementException;
+
+	/**
+	*  Returns and removes the front element of the queuee. It works with wraparound.
+	*
+	*  @return element at front of the queue
+	*  @throws NoSuchElementException if the queue is empty.
+	*/
+	public AnyType dequeue() throws java.util.NoSuchElementException;
+
+	/**
+	*  Makes the queue physically empty.
+	*/
+	public void clear();
+}

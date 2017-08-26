@@ -1,0 +1,100 @@
+;;; -*- coding: utf-8 -*-
+(("/home/lalit/.emacs.d/recentf" . 1466)
+ ("/home/lalit/.emacs.d/init.el" . 7935)
+ ("/home/lalit/Desktop/hello.c" . 42)
+ ("/home/lalit/.emacs.d/elpa/google-c-style-20140929.1118/google-c-style-autoloads.el" . 2351)
+ ("/home/lalit/Desktop/hello.java" . 33)
+ ("/home/lalit/.emacs.d/elpa/flymake-cursor-20130822.332/flymake-cursor-autoloads.el" . 1778)
+ ("/home/lalit/.emacs.d/elpa/flymake-google-cpplint-20140205.525/flymake-google-cpplint-autoloads.el" . 512)
+ ("/home/lalit/.emacs.d/elpa/flymake-easy-20140818.55/flymake-easy-autoloads.el" . 268)
+ ("/home/lalit/.emacs.d/elpa/ac-c-headers-20151021.134/ac-c-headers-autoloads.el" . 268)
+ ("/home/lalit/Desktop/System_Admin_Lab/case_calculator.sh" . 432)
+ ("/home/lalit/Desktop/System_Admin_Lab/case_change.sh" . 110)
+ ("/home/lalit/Desktop/System_Admin_Lab/find.sh" . 191)
+ ("/home/lalit/Desktop/System_Admin_Lab/math_calculator.sh" . 2626)
+ ("/home/lalit/Desktop/System_Admin_Lab/factorial.sh" . 164)
+ ("/home/lalit/Desktop/System_Admin_Lab/message.sh" . 431)
+ ("/home/lalit/Desktop/System_Admin_Lab/info.sh" . 14)
+ ("/home/lalit/"
+  (dired-filename . "/home/lalit/.PyCharm2016.3"))
+ ("/etc/passwd" . 2397)
+ ("/home/lalit/Desktop/hello.py" . 51)
+ ("/home/lalit/.emacs.d/elpa/company-jedi-20151216.1921/company-jedi-autoloads.el" . 545)
+ ("/home/lalit/.emacs.d/elpa/company-c-headers-20170531.1330/company-c-headers-autoloads.el" . 486)
+ ("/home/lalit/.emacs.d/elpa/ac-cider-20161006.19/ac-cider-autoloads.el" . 1347)
+ ("/home/lalit/.emacs.d/elpa/cider-20170729.133/cider-autoloads.el" . 11355)
+ ("/home/lalit/.emacs.d/elpa/clojure-mode-20170819.2159/clojure-mode-autoloads.el" . 3917)
+ ("/home/lalit/.emacs.d/elpa/queue-0.2/queue-autoloads.el" . 366)
+ ("/home/lalit/.emacs.d/elpa/spinner-1.7.3/spinner-autoloads.el" . 2446)
+ ("/home/lalit/.emacs.d/elpa/nodejs-repl-20170722.443/nodejs-repl-autoloads.el" . 1236)
+ ("/home/lalit/.emacs.d/elpa/tern-auto-complete-20170521.1235/tern-auto-complete-autoloads.el" . 445)
+ ("/home/lalit/.emacs.d/elpa/tern-20161222.850/tern-autoloads.el" . 460)
+ ("/home/lalit/.emacs.d/elpa/js2-refactor-20170703.314/js2-refactor-autoloads.el" . 1187)
+ ("/home/lalit/.emacs.d/elpa/ac-js2-20140906.442/ac-js2-autoloads.el" . 1147)
+ ("/home/lalit/.emacs.d/elpa/skewer-mode-20170730.1241/skewer-mode-autoloads.el" . 2802)
+ ("/home/lalit/.emacs.d/elpa/simple-httpd-20170125.1910/simple-httpd-autoloads.el" . 791)
+ ("/home/lalit/.emacs.d/elpa/magit-20170821.2057/magit-autoloads.el" . 65393)
+ ("/home/lalit/.emacs.d/elpa/git-commit-20170823.2103/git-commit-autoloads.el" . 1234)
+ ("/home/lalit/.emacs.d/elpa/with-editor-20170817.1240/with-editor-autoloads.el" . 287)
+ ("/home/lalit/.emacs.d/elpa/magit-popup-20170824.1130/magit-popup-autoloads.el" . 287)
+ ("/home/lalit/.emacs.d/elpa/async-20170823.2116/async-autoloads.el" . 4169)
+ ("/home/lalit/.emacs.d/elpa/origami-20170129.805/origami-autoloads.el" . 1585)
+ ("/home/lalit/.emacs.d/elpa/default-text-scale-20150227.956/default-text-scale-autoloads.el" . 648)
+ ("/home/lalit/.emacs.d/elpa/auctex-11.91.0/auctex-autoloads.el" . 10653)
+ ("/home/lalit/.emacs.d/elpa/dired+-20170818.1411/dired+-autoloads.el" . 81310)
+ ("/home/lalit/.emacs.d/elpa/dired-quick-sort-20161208.1312/dired-quick-sort-autoloads.el" . 1623)
+ ("/home/lalit/.emacs.d/"
+  (dired-filename . "/home/lalit/.emacs.d/ac-comphist.dat"))
+ ("/home/lalit/.emacs.d/elpa/irony-20170821.1300/irony-autoloads.el" . 3624)
+ ("/home/lalit/.emacs.d/Mike Zamansky/myinit.org" . 28655)
+ ("/home/lalit/.emacs.d/elpa/fiplr-20140723.2345/fiplr-autoloads.el" . 1825)
+ ("/home/lalit/.emacs.d/elpa/grizzl-20160818.37/grizzl-autoloads.el" . 1983)
+ ("/home/lalit/.emacs.d/elpa/multiple-cursors-20170813.38/multiple-cursors-autoloads.el" . 10447)
+ ("/home/lalit/.emacs.d/ido.last" . 2739)
+ ("/home/lalit/Desktop/Programming/Python/"
+  (dired-filename . "/home/lalit/Desktop/Programming/Python/a.py"))
+ ("/home/lalit/Desktop/Programming/"
+  (dired-filename . "/home/lalit/Desktop/Programming/android"))
+ ("/home/lalit/Desktop/Programming/Python/learnpython/First_programs/input_name.py" . 909)
+ ("/home/lalit/Desktop/Parallel_Programming_Lab/thread_matrix_multiplication.c" . 788)
+ ("/home/lalit/Desktop/Programming/Python/awesome.py" . 660)
+ ("/home/lalit/Desktop/Github/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project"))
+ ("/home/lalit/Desktop/"
+  (dired-filename . "/home/lalit/Desktop/Github"))
+ ("/home/lalit/Desktop/Parallel_Programming_Lab/"
+  (dired-filename . "/home/lalit/Desktop/Parallel_Programming_Lab/matix_mult.c"))
+ ("/home/lalit/Desktop/Programming/C/"
+  (dired-filename . "/home/lalit/Desktop/Programming/C/a"))
+ ("/home/lalit/Desktop/Programming/HTML5/basic.html" . 98)
+ ("/home/lalit/Desktop/Parallel_Programming_Lab/matrix_mult.c" . 1247)
+ ("/home/lalit/Desktop/System_Admin_Lab/sum.sh" . 197)
+ ("/home/lalit/Desktop/System_Admin_Lab/leap_year.sh" . 273)
+ ("/home/lalit/Desktop/System_Admin_Lab/biggest.sh" . 117)
+ ("/home/lalit/Desktop/Programming/JAVA/Codefights/QueueInterface.java" . 918)
+ ("/home/lalit/Desktop/Programming/JAVA/Chatting/Client.java" . 870)
+ ("/home/lalit/Desktop/Programming/Python/hashing.py" . 259)
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/Views/Shared/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/Views/Shared/.."))
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/Views/Home/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/Views/Home/Index.cshtml"))
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/Views/Home/Index.cshtml" . 373)
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/Views/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/Views/.."))
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/ThomasConnolly/.."))
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/ThomasConnolly/.."))
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/Project/.."))
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/CV-Website/.."))
+ ("/home/lalit/Desktop/Github/HTML Project/Templates/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Templates/.."))
+ ("/home/lalit/Desktop/Github/HTML Project/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Lalit"))
+ ("/home/lalit/Desktop/Github/HTML Project/Lalit/"
+  (dired-filename . "/home/lalit/Desktop/Github/HTML Project/Lalit/Imges"))
+ ("/home/lalit/Desktop/Github/HTML Project/Lalit/Homepage.html" . 181)
+ ("/home/lalit/Desktop/Parallel_Programming_Lab/pthread_hello.c" . 152)
+ ("/home/lalit/Desktop/Programming/Python/a.py" . 208))

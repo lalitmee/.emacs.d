@@ -1,0 +1,16 @@
+ls
+cd
+cd Desktop/
+ls
+cd Programming/
+ls
+cd Python/
+ls
+find-file hashing.py 
+ls
+exit
+cd
+cd Desktop/
+cd Programming/Python/
+ls
+find-file awesome.py

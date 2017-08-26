@@ -1,0 +1,3 @@
+list=$(find /home/user/Desktop -name '*.pdf' -o -name '*.txt' -o -name '*.bmp')
+
+echo "$list"

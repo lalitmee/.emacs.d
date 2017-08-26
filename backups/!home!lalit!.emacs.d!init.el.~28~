@@ -1,0 +1,504 @@
+;; stuff automatically added
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
+ '(package-selected-packages
+   (quote
+    (hydra smart-mode-line-powerline-theme moe-theme powerline python-django dumb-jump geben-helm-projectile projectile-codesearch counsel-projectile projectile smartparens ggtags virtualenvwrapper better-shell web-mode iedit expand-region aggressive-indent hungry-delete beacon smart-mode-line all-the-icons neotree elpy jedi flycheck dracula counsel swiper lorem-ipsum tabbar ace-window org-bullets which-key try use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+
+
+;; Our stuff
+
+(setq inhibit-startup-message t)
+
+
+(setq user-full-name "Lalit Kumar"
+      user-mail-address "lalitkumar.meena.lk@gmail.com")
+
+
+
+;; Backups
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq delete-old-versions -1)
+(setq version-control t)
+(setq vc-make-backup-files t)
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
+;; end Backups
+
+
+
+
+;; spaces
+(setq sentence-end-double-space nil)
+
+
+
+(tool-bar-mode -1)
+
+
+
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+
+
+
+(unless (assoc-default "org" package-archives)
+  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t))
+
+
+
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+	(package-refresh-contents)
+	(package-install 'use-package))
+
+
+
+(use-package try
+	:ensure t)
+
+
+
+(use-package which-key
+	:ensure t
+	:config
+	(which-key-mode))
+
+
+;; Org-mode stuff
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+
+
+(defalias 'list-buffers 'ibuffer)
+;; (defalias 'list-buffers 'ibuffer-other-window)
+
+; If you like a tabbar
+;(use-package tabbar
+;  :ensure t
+;  :config
+;  (tabbar-mode 1))
+
+
+(use-package ace-window
+  :ensure t
+  :init
+  (progn
+    (global-set-key [remap other-window] 'ace-window)
+    (custom-set-faces
+     '(aw-leading-char-face
+       ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+    ))
+
+
+
+;; it looks like counsel is a requirement for swiper
+(use-package counsel
+  :bind
+  (("M-y" . counsel-yank-pop)
+   :map ivy-minibuffer-map
+   ("M-y" . ivy-next-line)))
+
+
+
+(use-package swiper
+  :ensure t
+  :config
+  (progn
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (global-set-key "\C-s" 'swiper)
+    (global-set-key (kbd "C-c C-r") 'ivy-resume)
+    (global-set-key (kbd "<f6>") 'ivy-resume)
+    (global-set-key (kbd "M-x") 'counsel-M-x)
+    (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+    (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+    (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+    (global-set-key (kbd "<f1> l") 'counsel-load-library)
+    (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+    (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+    (global-set-key (kbd "C-c g") 'counsel-git)
+    (global-set-key (kbd "C-c j") 'counsel-git-grep)
+    (global-set-key (kbd "C-c k") 'counsel-ag)
+    (global-set-key (kbd "C-x l") 'counsel-locate)
+    (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+    ))
+
+
+
+(use-package avy
+  :ensure t
+  :bind ("M-s" . avy-goto-char))
+
+
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'dracula t)
+
+
+
+(set-face-attribute 'default nil :height 160)
+
+
+
+(use-package flycheck
+  :ensure
+  :init
+  (global-flycheck-mode t))
+
+
+
+(use-package auto-complete
+  :ensure t
+  :init
+  (progn
+    (ac-config-default)
+    (global-auto-complete-mode t)
+    ))
+
+
+
+(setq-default py-python-command "python3")
+(setq-default python-shell-interpreter "python3")
+
+(use-package jedi
+  :ensure t
+  :init
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (add-hook 'python-mode-hook 'jedi:ac-setup))
+
+
+(use-package elpy
+  :ensure t
+  :config
+  (elpy-enable))
+
+(use-package virtualenvwrapper
+  :ensure t
+  :config
+  (venv-initialize-interactive-shells)
+  (venv-initialize-eshell))
+
+
+
+(use-package yasnippet
+  :ensure
+  :init
+  (yas-global-mode 1))
+
+
+
+(use-package better-shell
+  :ensure t
+  :bind (("C-'" . better-shell-shell)))
+
+(electric-pair-mode 1)
+(setq-default electric-pair-pairs '(
+				    (?\" . ?\")
+				    (?\{ . ?\})
+				    ) )
+
+;; for copy, paste, cut
+(cua-mode 1)
+
+
+
+;; turn on highlight current line
+(global-hl-line-mode 1)
+
+
+
+;;turn on bracket match highlight
+(show-paren-mode 1)
+
+
+
+;; remember cursor position. When file is opened, put cursor at last position
+(if (version< emacs-version "25.0")
+    (progn
+      (require 'saveplace)
+      (setq-default save-place t))
+  (save-place-mode 1))
+
+
+
+;; UTF-8 as default encoding
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+
+
+
+(global-linum-mode 1)
+
+
+
+(global-auto-revert-mode 1)
+
+
+
+(require 'recentf)
+(recentf-mode 1)
+
+
+(global-visual-line-mode 1)
+
+
+
+;; changing yes to y and no n
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+
+
+;; Save history of the emacs
+(setq-default savehist-file "~/.emacs.d/savehist")
+(savehist-mode 1)
+(setq history-length t)
+(setq history-delete-duplicates t)
+(setq-default savehist-save-minibuffer-history 1)
+(setq-default savehist-additional-variables
+	      '(kill-ring
+		search-ring
+		regexp-search-ring))
+
+
+
+(add-to-list 'load-path "/home/lalit/.emacs.d/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+
+
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+
+(use-package all-the-icons)
+
+
+(display-time-mode 1)
+
+
+(use-package beacon
+  :ensure t
+  :config
+  (beacon-mode 1))
+
+
+
+(use-package hungry-delete
+  :ensure t
+  :config
+  (global-hungry-delete-mode))
+
+
+(use-package aggressive-indent
+  :ensure t
+  :config
+  (global-aggressive-indent-mode 1))
+
+
+(use-package expand-region
+  :ensure t
+  :config
+  (global-set-key (kbd "C-=") 'er/expand-region))
+
+
+(use-package iedit
+  :ensure t)
+
+(setq save-interprogram-paste-before-kill t)
+(setq-default auto-revert-verbose nil)
+(global-set-key (kbd "<f5>") 'revert-buffer)
+
+
+;; Web mode
+(use-package web-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  (setq web-mode-engines-alist
+	'(("django"    . "\\.html\\'")))
+  (setq web-mode-ac-sources-alist
+	'(("css" . (ac-source-css-property))
+	  ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+
+  (setq web-mode-enable-auto-closing t)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-style-padding 1)
+  (setq web-mode-script-padding 1)
+  (setq web-mode-block-padding 0)
+  (setq web-mode-comment-style 2)
+
+  (setq web-mode-extra-snippets
+	'(("erb" . (("toto" . "<% toto | %>\n\n<% end %>")))
+	  ("php" . (("dowhile" . "<?php do { ?>\n\n<?php } while (|); ?>")
+		    ("debug" . "<?php error_log(__LINE__); ?>")))
+	  ))
+
+  (setq web-mode-extra-auto-pairs
+	'(("erb"  . (("beg" "end")))
+	  ("php"  . (("beg" "end")
+		     ("beg" "end")))
+	  ))
+
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-css-colorization t)
+  (setq web-mode-enable-block-face t)
+  (setq web-mode-enable-part-face t)
+  (setq-default web-mode-enable-comment-keywords t)
+  (setq web-mode-enable-heredoc-fontification t)
+  (setq web-mode-enable-current-column-highlight t)
+  (setq web-mode-enable-current-element-highlight t)
+  (setq web-mode-ac-sources-alist
+	'(("css" . (ac-source-css-property))
+	  ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+  (setq web-mode-ac-sources-alist
+	'(("php" . (ac-source-yasnippet ac-source-php-auto-yasnippets))
+	  ("html" . (ac-source-emmet-html-aliases ac-source-emmet-html-snippets))
+	  ("css" . (ac-source-css-property ac-source-emmet-css-snippets))))
+  
+  (add-hook 'web-mode-before-auto-complete-hooks
+	    '(lambda ()
+	       (let ((web-mode-cur-language
+		      (web-mode-language-at-pos)))
+		 (if (string= web-mode-cur-language "php")
+		     (yas-activate-extra-mode 'php-mode)
+		   (yas-deactivate-extra-mode 'php-mode))
+		 (if (string= web-mode-cur-language "css")
+		     (setq emmet-use-css-transform t)
+		   (setq emmet-use-css-transform nil)))))
+
+  (add-hook 'local-write-file-hooks
+            (lambda ()
+	      (delete-trailing-whitespace)
+	      nil))
+
+  
+  (setq web-mode-enable-auto-quoting t)) ; this fixes the quote problem I mentioned
+
+
+;; C++ package
+
+(use-package ggtags
+  :ensure t
+  :config
+  (add-hook 'c-mode-common-hook
+	    (lambda ()
+	      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+		(ggtags-mode 1))))
+  )
+
+
+
+;; projectile
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'ivy))
+
+(use-package counsel-projectile
+  :ensure t
+  :config
+  (counsel-projectile-on))
+
+(use-package smartparens
+  :ensure t
+  :config
+  (use-package smartparens-config)
+  (use-package smartparens-html)
+  (use-package smartparens-python)
+  (use-package smartparens-latex)
+  (smartparens-global-mode t)
+  (show-smartparens-global-mode t)
+  :bind
+  ( ("C-<down>" . sp-down-sexp)
+    ("C-<up>"   . sp-up-sexp)
+    ("M-<down>" . sp-backward-down-sexp)
+    ("M-<up>"   . sp-backward-up-sexp)
+    ("C-M-a" . sp-beginning-of-sexp)
+    ("C-M-e" . sp-end-of-sexp)
+
+
+
+    ("C-M-f" . sp-forward-sexp)
+    ("C-M-b" . sp-backward-sexp)
+
+    ("C-M-n" . sp-next-sexp)
+    ("C-M-p" . sp-previous-sexp)
+
+    ("C-S-f" . sp-forward-symbol)
+    ("C-S-b" . sp-backward-symbol)
+
+    ("C-<right>" . sp-forward-slurp-sexp)
+    ("M-<right>" . sp-forward-barf-sexp)
+    ("C-<left>"  . sp-backward-slurp-sexp)
+    ("M-<left>"  . sp-backward-barf-sexp)
+
+    ("C-M-t" . sp-transpose-sexp)
+    ("C-M-k" . sp-kill-sexp)
+    ("C-k"   . sp-kill-hybrid-sexp)
+    ("M-k"   . sp-backward-kill-sexp)
+    ("C-M-w" . sp-copy-sexp)
+
+    ("C-M-d" . delete-sexp)
+
+    ("M-<backspace>" . backward-kill-word)
+    ("C-<backspace>" . sp-backward-kill-word)
+    ([remap sp-backward-kill-word] . backward-kill-word)
+
+    ("M-[" . sp-backward-unwrap-sexp)
+    ("M-]" . sp-unwrap-sexp)
+
+    ("C-x C-t" . sp-transpose-hybrid-sexp)
+
+    ("C-c ("  . wrap-with-parens)
+    ("C-c ["  . wrap-with-brackets)
+    ("C-c {"  . wrap-with-braces)
+    ("C-c '"  . wrap-with-single-quotes)
+    ("C-c \"" . wrap-with-double-quotes)
+    ("C-c _"  . wrap-with-underscores)
+    ("C-c `"  . wrap-with-back-quotes)
+    ))
+
+
+(use-package dumb-jump
+  :bind (("M-g o" . dumb-jump-go-other-window)
+         ("M-g j" . dumb-jump-go)
+         ("M-g x" . dumb-jump-go-prefer-external)
+         ("M-g z" . dumb-jump-go-prefer-external-other-window))
+  :config
+  ;; (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
+  :init
+  (dumb-jump-mode)
+  :ensure
+  )
+
+;;-------------------------------------
+
+;;; init.el ends here

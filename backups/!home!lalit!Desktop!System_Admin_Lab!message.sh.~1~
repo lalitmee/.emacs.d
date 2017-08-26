@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Enter any message: "
+
+read m
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+echo "${bold}m${normal}"
