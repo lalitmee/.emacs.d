@@ -30,16 +30,6 @@
       user-mail-address "lalitkumar.meena.lk@gmail.com")
 
 
-
-;; Backups
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
-(setq delete-old-versions -1)
-(setq version-control t)
-(setq vc-make-backup-files t)
-(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
-;; end Backups
-
-
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
@@ -281,6 +271,8 @@
 
 (require 'recentf)
 (recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 
 (global-visual-line-mode 1)
@@ -289,19 +281,6 @@
 
 ;; changing yes to y and no n
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-
-
-;; Save history of the emacs
-(setq-default savehist-file "~/.emacs.d/savehist")
-(savehist-mode 1)
-(setq history-length t)
-(setq history-delete-duplicates t)
-(setq-default savehist-save-minibuffer-history 1)
-(setq-default savehist-additional-variables
-	      '(kill-ring
-		search-ring
-		regexp-search-ring))
 
 
 
