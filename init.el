@@ -719,5 +719,7 @@
             ;; use code format
             (add-hook 'before-save-hook 'meghanada-code-beautify-before-save)))
 
+;; to check magit
+
 
 ;;; INIT.EL ENDS HERE
