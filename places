@@ -1,6 +1,6 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/lalit/.emacs.d/init.el" . 17212)
- ("/home/lalit/.emacs.d/recentf" . 1605)
+(("/home/lalit/.emacs.d/init.el" . 2727)
+ ("/home/lalit/.emacs.d/recentf" . 1601)
  ("/home/lalit/.emacs.d/elpa/zerodark-theme-20170818.47/zerodark-theme-autoloads.el" . 611)
  ("/home/lalit/.emacs.d/elpa/material-theme-20160908.1538/material-theme-autoloads.el" . 924)
  ("/home/lalit/.emacs.d/elpa/java-imports-20160311.1515/java-imports-autoloads.el" . 1722)
@@ -8,9 +8,7 @@
  ("/home/lalit/.emacs.d/elpa/java-snippets-20160626.1952/java-snippets-autoloads.el" . 555)
  ("/usr/share/emacs/25.2/etc/COPYING" . 1767)
  ("/home/lalit/.emacs.d/elpa/meghanada-20170723.1724/meghanada-autoloads.el" . 2233)
- ("/home/lalit/Desktop/hello.c" . 42)
  ("/home/lalit/.emacs.d/elpa/google-c-style-20140929.1118/google-c-style-autoloads.el" . 2351)
- ("/home/lalit/Desktop/hello.java" . 33)
  ("/home/lalit/.emacs.d/elpa/flymake-cursor-20130822.332/flymake-cursor-autoloads.el" . 1778)
  ("/home/lalit/.emacs.d/elpa/flymake-google-cpplint-20140205.525/flymake-google-cpplint-autoloads.el" . 512)
  ("/home/lalit/.emacs.d/elpa/flymake-easy-20140818.55/flymake-easy-autoloads.el" . 268)
@@ -25,7 +23,6 @@
  ("/home/lalit/"
   (dired-filename . "/home/lalit/.PyCharm2016.3"))
  ("/etc/passwd" . 2397)
- ("/home/lalit/Desktop/hello.py" . 51)
  ("/home/lalit/.emacs.d/elpa/company-jedi-20151216.1921/company-jedi-autoloads.el" . 545)
  ("/home/lalit/.emacs.d/elpa/company-c-headers-20170531.1330/company-c-headers-autoloads.el" . 486)
  ("/home/lalit/.emacs.d/elpa/ac-cider-20161006.19/ac-cider-autoloads.el" . 1347)

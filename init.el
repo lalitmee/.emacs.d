@@ -665,29 +665,6 @@
     (bind-key "C-x g" 'magit-status)
     ))
 
-(use-package cider
-  :ensure t
-  :config
-					; this is to make cider-jack-in-cljs work
-  (setq cider-cljs-lein-repl
-	"(do (require 'figwheel-sidecar.repl-api)
-           (figwheel-sidecar.repl-api/start-figwheel!)
-           (figwheel-sidecar.repl-api/cljs-repl))")
-
-  )
-
-(use-package ac-cider
-  :ensure t
-  :config
-  (add-hook 'cider-mode-hook 'ac-flyspell-workaround)
-  (add-hook 'cider-mode-hook 'ac-cider-setup)
-  (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
-  (eval-after-load "auto-complete"
-    '(progn
-       (add-to-list 'ac-modes 'cider-mode)
-       (add-to-list 'ac-modes 'cider-repl-mode)))
-  )
-
 
 (require 'meghanada)
 (add-hook 'java-mode-hook
