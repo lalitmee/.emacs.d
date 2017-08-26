@@ -1,0 +1,20 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	deleted:    .#init.el
+#	deleted:    auto-save-list/#!home!lalit!.emacs.d!init.el#
+#	modified:   auto-save-list/.saves-10079-machine~
+#	modified:   init.el
+#
+# Changes not staged for commit:
+#	modified:   Mike Zamansky (modified content, untracked content)
+#	deleted:    auto-save-list/#!home!lalit!.emacs.d!.git!COMMIT_EDITMSG#
+#	modified:   auto-save-list/.saves-10079-machine~
+#
+# Untracked files:
+#	backups/!home!lalit!.emacs.d!init.el.~92~
+#
