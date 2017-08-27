@@ -4,18 +4,23 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(cua-mode t nil (cua-base))
  '(custom-safe-themes
    (quote
     ("84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
+ '(display-time-mode t)
  '(meghanada-auto-start nil)
  '(package-selected-packages
    (quote
-    (zerodark-theme material-theme java-imports java-snippets meghanada google-c-style flymake-cursor flymake-google-cpplint ac-c-headers company-jedi company-c-headers cider ac-cider magit origami default-text-scale auctex dired+ dired-quick-sort irony fiplr multiple-cursors emmet-mode treemacs-evil treemacs ac-emacs-eclim company-emacs-eclim gradle-mode eclim cmake-ide hydra smart-mode-line-powerline-theme moe-theme powerline python-django dumb-jump geben-helm-projectile projectile-codesearch counsel-projectile projectile smartparens ggtags virtualenvwrapper better-shell web-mode iedit expand-region aggressive-indent hungry-delete beacon smart-mode-line all-the-icons neotree elpy jedi flycheck dracula counsel swiper lorem-ipsum tabbar ace-window org-bullets which-key try use-package))))
+    (package-build shut-up epl git commander f dash s dashboard zerodark-theme material-theme java-imports java-snippets meghanada google-c-style flymake-cursor flymake-google-cpplint ac-c-headers company-jedi company-c-headers cider ac-cider magit origami default-text-scale auctex dired+ dired-quick-sort irony fiplr multiple-cursors emmet-mode treemacs-evil treemacs ac-emacs-eclim company-emacs-eclim gradle-mode eclim cmake-ide hydra smart-mode-line-powerline-theme moe-theme powerline python-django dumb-jump geben-helm-projectile projectile-codesearch counsel-projectile projectile smartparens ggtags virtualenvwrapper better-shell web-mode iedit expand-region aggressive-indent hungry-delete beacon smart-mode-line all-the-icons neotree elpy jedi flycheck dracula counsel swiper lorem-ipsum tabbar ace-window org-bullets which-key try use-package)))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Monaco" :foundry "unknown" :slant normal :weight normal :height 130 :width normal))))
  '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0))))
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
@@ -24,7 +29,6 @@
 ;; Our stuff
 
 (setq inhibit-startup-message t)
-
 
 (setq user-full-name "Lalit Kumar"
       user-mail-address "lalitkumar.meena.lk@gmail.com")
@@ -676,6 +680,5 @@
             (add-hook 'before-save-hook 'meghanada-code-beautify-before-save)))
 
 ;; to check magit
-
 
 ;;; INIT.EL ENDS HERE
